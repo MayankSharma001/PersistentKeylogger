@@ -89,3 +89,7 @@ WantedBy=multi-user.target
    sudo systemctl restart cron
    ```
 
+## Further Enhancement
+-  Making the script immutable – Use chattr +i to prevent any unauthorized modifications to the script.
+-  Access Control – Restrict access to the script and log files using ACLs (setfacl) to ensure only authorized users can read or modify them.
+-  Log Integrity Verification – Implement SHA256 hashing for log files, allowing us to verify that the logs have not been tampered with.
